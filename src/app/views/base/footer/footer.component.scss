@@ -1,0 +1,16 @@
+.footer {
+  text-align: center;
+  padding: 13px 0 3px 0; 
+  width: 100%;
+  float: left;
+  box-shadow: var(--shadowColor1) -1px -1px 10px 1px;
+
+  p {
+    color: var(--textColor);
+    padding-bottom: 10px;
+    font-size: 12px;
+    a {
+      margin: 10px;
+    }
+  }
+}

@@ -1,0 +1,15 @@
+<div class="container">
+  <div class="product-list">
+    <div class="product" *ngFor="let item of products" [@productAnimation]>
+      <figure>
+        <img [src]="item.imgUrl" [alt]="item.name" />
+        <figcaption>Offer Price : $ {{ item.price }}</figcaption>
+      </figure>
+      <div class="info-box">
+        <h3>{{ item.name }}</h3>
+        <p>{{ item.description }}</p>
+        <button class="btn-primary">Add to Cart</button>
+      </div>
+    </div>
+  </div>
+</div>

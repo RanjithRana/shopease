@@ -1,1 +1,83 @@
 /* You can add global styles to this file, and also import other style files */
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600&display=swap");
+@import "./assets/theme/reset";
+@import "./assets/theme/variables";
+@import "./assets/theme/colors";
+@import "./assets/theme/functions";
+
+body {
+  font-family: "Open Sans", sans-serif;
+  background-color: var(--bodyColor);
+  color: var(--textColor);
+  font-size: 14px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Open Sans", sans-serif;
+  color: var(--textColor);
+  padding-bottom: 10px;
+}
+
+p {
+  font-size: $font-size-md;
+  line-height: $line-height-md;
+  color: var(--textColor);
+}
+
+a {
+  color: var(--btnColor);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+  color: var(--btnColor);
+}
+
+/*Container Style*/
+.container {
+  width: 100%;
+  max-width: $container-width;
+  margin: 0 auto;
+}
+
+.section-main{
+  margin-top: 80px;
+  width: 100%;
+  float: left;
+  min-height: 800px;
+}
+
+.btn-primary {
+  background-color: var(--btnColor); 
+  color: #fff; 
+  padding: 9px 20px;
+  width: 100%;
+  text-align: center;
+  font-size: $font-size-md;
+  border: none; 
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+// Styles for smartphones (up to 767px)
+@media screen and (max-width: $small-screen) {
+}
+
+// Styles for tablets and small laptops (768px to 1023px)
+@media screen and (min-width: $tablet-screen) and (max-width: $desktop-screen) {
+}
+
+// Styles for standard desktop screens (1024px to 1440px)
+@media screen and (min-width: $desktop-screen) and (max-width: $large-desktop-screen) {
+}
+
+// Styles for large desktop screens (1681px to 1920px)
+@media screen and (min-width: $large-desktop-screen) and (max-width: $extra-large-desktop-screen) {
+}
