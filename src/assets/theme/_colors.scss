@@ -6,6 +6,8 @@
   --shadowColor2: #e1e1e1;
   --priceColor:#df0088;
   --textColor:#000;
+  --LinkSelectColor: #c1be00;
+  --ContentBgColor:#f9f9f9;
 }
 
 .dark-theme {
@@ -16,6 +18,8 @@
   --shadowColor2: transparent;
   --priceColor:#c90000;
   --textColor:#FFF;
+  --LinkSelectColor: #0079c9;
+  --ContentBgColor: transparent;
 }
 
 $variables: (
@@ -26,4 +30,6 @@ $variables: (
   --btnHoverColor: var(--btnHoverColor),
   --priceColor: var(--priceColor),
   --textColor: var(--textColor),
+  --LinkSelectColor: var(--LinkSelectColor),
+  --ContentBgColor: var(--ContentBgColor),
 );

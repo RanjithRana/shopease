@@ -1,22 +1,35 @@
 <header class="header">
-    <div class="container">
-  <div class="logo">
-   <a href="/"><img src="../../../../assets/img/logo.svg" alt="ShopEase" /></a>
+  <div class="container">
+    <div class="logo">
+      <a href="/"
+        ><img src="../../../../assets/img/logo.svg" alt="ShopEase"
+      /></a>
+    </div>
+    <button class="hamburger" #hamburger (click)="toggleMenu()">
+      <div class="bar"></div>
+      <div class="bar"></div>
+      <div class="bar"></div>
+    </button>
+    <div class="menu-container" [class.open]="menuState">
+      <nav class="menu">
+        <ul>
+          <li><a routerLinkActive="active" routerLink="/home">Home</a></li>
+          <li>
+            <a
+              routerLinkActive="active"
+              routerLink="/"
+              [routerLinkActiveOptions]="{ exact: true }"
+              >Products</a
+            >
+          </li>
+          <li>
+            <a routerLinkActive="active" routerLink="/about-us">About Us</a>
+          </li>
+          <li>
+            <a routerLinkActive="active" routerLink="/contact">Contact</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
   </div>
-  <button class="hamburger" (click)="toggleMenu()">
-    <div class="bar"></div>
-    <div class="bar"></div>
-    <div class="bar"></div>
-  </button>
-  <div class="menu-container" [class.open]="menuState">
-    <nav class="menu">
-      <ul>
-        <li><a routerLink="/">Home</a></li>
-        <li><a routerLink="/products">Products</a></li>
-        <li><a routerLink="/about-us">About Us</a></li>
-        <li><a routerLink="/contact">Contact</a></li>
-      </ul>
-    </nav>
-  </div>
-</div>
 </header>

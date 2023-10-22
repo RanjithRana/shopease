@@ -1,12 +1,13 @@
 // Responsive breakpoints
-$small-screen: 767px;
+$small-screen: 1023px;
 $tablet-screen: 1024px;
 $desktop-screen: 1440px;
-$large-desktop-screen: 1680px;
-$extra-large-desktop-screen: 1920px;
+
 
 //containerSize
-$container-width:1140px;
+$container-width-lg:1140px;
+$container-width-md:1000px;
+$container-width-xs:100%;
 
 //Font Sizes
 $font-size-sm: 12px;

@@ -1,6 +1,8 @@
+@import "../../../../assets/theme/variables";
+
 .footer {
   text-align: center;
-  padding: 13px 0 3px 0; 
+  padding: 13px 0 3px 0;
   width: 100%;
   float: left;
   box-shadow: var(--shadowColor1) -1px -1px 10px 1px;
@@ -11,6 +13,17 @@
     font-size: 12px;
     a {
       margin: 10px;
+    }
+  }
+}
+
+// Styles for smartphones (up to 1023px)
+@media screen and (max-width: $small-screen) {
+  .footer {
+    p {
+      a {
+        margin: 5px;
+      }
     }
   }
 }

@@ -6,12 +6,12 @@ const routes: Routes = [
   {
     path: '',
     loadChildren: () =>
-      import('./views/pages/home/home.module').then((m) => m.HomeModule),
+    import('./views/pages/products/products.module').then((m) => m.ProductsModule),
   },
   {
-    path: 'products',
+    path: 'home',
     loadChildren: () =>
-      import('./views/pages/products/products.module').then((m) => m.ProductsModule),
+      import('./views/pages/home/home.module').then((m) => m.HomeModule),
   },
   {
     path: 'about-us',

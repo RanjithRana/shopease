@@ -22,11 +22,39 @@ import { animate, style, transition, trigger } from '@angular/animations';
 export class ProductsComponent implements OnInit {
   categories: Category[] = [];
   products: Product[] = [];
+  searchResults: Product[] = [];
+  selectedCategory: number = 0;
+  resetFlag: boolean = false;
 
   constructor(private productService: ProductService) {}
 
   ngOnInit(): void {
     this.categories = this.productService.getCategory();
     this.products = this.productService.getProducts();
+    this.searchResults = this.products;
+  }
+
+  performSearch(query: string) {
+    {
+      if (query.trim() === '') {
+        this.applyFilter();
+      } else {
+        this.resetFlag = false;
+        this.searchResults = this.searchResults.filter((product) =>
+          product.name.toLowerCase().includes(query.toLowerCase())
+        );
+      }
+    }
+  }
+
+  applyFilter() {
+    this.resetFlag = true;
+    if (this.selectedCategory > 0) {
+      this.searchResults = this.products.filter(
+        (product) => product.category == this.selectedCategory
+      );
+    } else {
+      this.searchResults = this.products;
+    }
   }
 }

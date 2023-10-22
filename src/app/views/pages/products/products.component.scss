@@ -1,7 +1,26 @@
-.product-list {
+@import "../../../../assets/theme/variables";
+
+.filter-content {
   width: 100%;
   float: left;
-  padding: 80px 0 30px 0;
+  padding: 90px 0 0 0;
+
+  .select-box {
+    width: 200px;
+    float: left;
+  }
+  .search-box {
+    width: 500px;
+    float: right;
+  }
+}
+
+.product-list {
+  width: 103%;
+  float: left;
+  padding: 10px 0 30px 0;
+  margin: 0 -1.5%;
+  min-height: 750px;
 
   .product {
     width: 30.33%;
@@ -34,8 +53,10 @@
       padding: 4% 6% 5% 6%;
       h3 {
         padding: 0 0 4px 0;
+        color: #000;
       }
       p {
+        color: #666;
         padding-bottom: 10px;
       }
     }
@@ -48,6 +69,61 @@
       }
       .btn-primary {
         background-color: var(--btnHoverColor);
+      }
+    }
+  }
+}
+
+.no-result {
+  text-align: center;
+  padding: 30%;
+}
+
+// Styles for smartphones (up to 1023px)
+@media screen and (max-width: $small-screen) {
+  .filter-content {
+    padding: 70px 3% 0 3%;
+
+    .select-box {
+      width: 30%;
+      min-width: 140px;
+      padding-bottom: 0;
+      margin-bottom: -1px;
+    }
+    .search-box {
+      width: 100%;
+      float: right;
+    }
+  }
+  .product-list {
+    width: 100%;
+    padding: 10px 0 30px 0;
+    margin: 0;
+    padding: 0 1.5%;
+    min-height: 500px;
+
+    .product {
+      width: 46.25%;
+      float: left;
+      margin: 3% 1.5%;
+      background: #fff;
+      box-shadow: var(--shadowColor2) 1px 3px 4px 1px;
+
+      figure {
+        figcaption {
+          font-size: $font-size-sm;
+        }
+      }
+      .info-box {
+        h3 {
+          font-size: $font-size-md;
+        }
+      }
+      &:nth-child(odd) {
+        margin-right: 3%;
+      }
+      &:last-child {
+        margin-bottom: 6%;
       }
     }
   }

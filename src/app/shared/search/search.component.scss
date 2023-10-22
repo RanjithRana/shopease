@@ -1,0 +1,55 @@
+@import "../../../assets/theme/variables";
+
+.search-box {
+    display: flex;
+    align-items: center;
+    background-color: #FFF;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  
+    .search-input {
+      flex: 1;
+      border: none;
+      outline: none;
+      padding: 8px;
+      font-size: $font-size-lg;
+      height: 35px;
+      background: transparent;
+  
+      &::placeholder {
+        color: #999;
+      }
+    }
+  
+    .btn-primary {
+      margin-left: 5px;
+      height: 35px;
+      width: 40px;
+      padding: 0 0 0 10px;
+      border-radius: 0 5px 5px 0;
+      background-color: var(--LinkSelectColor);
+      img{
+        max-width: 20px;
+      }
+    }
+  }
+  
+// Styles for smartphones (up to 1023px)
+@media screen and (max-width: $small-screen) {
+  .search-box {  
+    .search-input {      
+      padding: 6px;
+      font-size: $font-size-md;
+      height: 30px;  
+    }
+  
+    .btn-primary {
+      margin-left: 5px;
+      height: 30px;
+      width: 40px;     
+      img{
+        max-width: 18px;
+      }
+    }
+  }
+}

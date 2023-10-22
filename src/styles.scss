@@ -9,7 +9,7 @@ body {
   font-family: "Open Sans", sans-serif;
   background-color: var(--bodyColor);
   color: var(--textColor);
-  font-size: 14px;
+  font-size: $font-size-md;
 }
 
 h1,
@@ -42,7 +42,7 @@ a:hover {
 /*Container Style*/
 .container {
   width: 100%;
-  max-width: $container-width;
+  max-width: $container-width-lg;
   margin: 0 auto;
 }
 
@@ -51,6 +51,12 @@ a:hover {
   width: 100%;
   float: left;
   min-height: 800px;
+}
+
+.main-content{
+  width: 100%;
+  float: left;
+  background: var(--ContentBgColor);
 }
 
 .btn-primary {
@@ -66,18 +72,83 @@ a:hover {
   transition: background-color 0.3s;
 }
 
-// Styles for smartphones (up to 767px)
+//Select styles
+select {
+  width: 100%;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #fff;
+  color: #333;
+  font-size: $font-size-lg;
+  outline: none;
+  height: 35px;
+  appearance: none;
+  font-family: "Open Sans", sans-serif;
+  background-image: url('../src/assets/img/down-arrow.png'); 
+  background-position: right 10px center;
+  background-repeat: no-repeat;
+  background-size: 20px;
+  padding: 0 10px;
+
+  &:hover {
+    border-color: #007bff;
+  }
+
+  &:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+  }
+
+  option {
+    background-color: #fff;
+    color: #333;
+    font-size:  $font-size-lg;
+    padding: 3px 10px;
+
+    &:hover {
+      background-color: #007bff;
+      color: #fff;
+      cursor: pointer;
+    }
+  }
+}
+
+
+// Styles for smartphones (up to 1023px)
 @media screen and (max-width: $small-screen) {
+  .container {
+    max-width: $container-width-xs;
+  }
+  .section-main{
+    margin-top: 80px;
+    padding: 0 2%;
+    min-height: 500px;
+  }
+
+  p {
+    font-size: $font-size-sm;
+  }
+
+  select {
+    font-size:$font-size-md;
+    background-size: 15px;
+    padding: 0 10px;
+    height: 30px;
+
+    option{
+      font-size: $font-size-md;
+    }
+  }
+
+  .btn-primary {
+    padding: 6px 20px;
+    font-size: $font-size-sm;
+  }
 }
 
-// Styles for tablets and small laptops (768px to 1023px)
+// Styles for tablets and small laptops (1024px to 1440px)
 @media screen and (min-width: $tablet-screen) and (max-width: $desktop-screen) {
-}
-
-// Styles for standard desktop screens (1024px to 1440px)
-@media screen and (min-width: $desktop-screen) and (max-width: $large-desktop-screen) {
-}
-
-// Styles for large desktop screens (1681px to 1920px)
-@media screen and (min-width: $large-desktop-screen) and (max-width: $extra-large-desktop-screen) {
+  .container {
+    max-width: $container-width-md;
+  }
 }
