@@ -23,7 +23,7 @@
       >
         <figure>
           <img [src]="item.imgUrl" [alt]="item.name" />
-          <figcaption>Offer Price : $ {{ item.price }}</figcaption>
+          <figcaption>Offer Price : {{ item.price | currency }}</figcaption>
         </figure>
         <div class="info-box">
           <h3>{{ item.name }}</h3>

@@ -1,7 +1,7 @@
 <header class="header">
   <div class="container">
     <div class="logo">
-      <a href="/"
+      <a routerLink="/"
         ><img src="assets/img/logo.svg" alt="ShopEase"
       /></a>
     </div>
@@ -13,8 +13,8 @@
     <div class="menu-container" [class.open]="menuState">
       <nav class="menu">
         <ul>
-          <li><a routerLinkActive="active" routerLink="/home">Home</a></li>
-          <li>
+          <li #menuLink><a routerLinkActive="active" routerLink="/home">Home</a></li>
+          <li #menuLink>
             <a
               routerLinkActive="active"
               routerLink="/"
@@ -22,10 +22,10 @@
               >Products</a
             >
           </li>
-          <li>
+          <li #menuLink>
             <a routerLinkActive="active" routerLink="/about-us">About Us</a>
           </li>
-          <li>
+          <li #menuLink>
             <a routerLinkActive="active" routerLink="/contact">Contact</a>
           </li>
         </ul>

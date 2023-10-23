@@ -99,15 +99,13 @@
     width: 100%;
     padding: 10px 0 30px 0;
     margin: 0;
-    padding: 0 1.5%;
+    padding: 0;
     min-height: 500px;
 
     .product {
-      width: 46.25%;
+      width: 94%;
       float: left;
-      margin: 3% 1.5%;
-      background: #fff;
-      box-shadow: var(--shadowColor2) 1px 3px 4px 1px;
+      margin: 3%;
 
       figure {
         figcaption {
@@ -119,12 +117,26 @@
           font-size: $font-size-md;
         }
       }
-      &:nth-child(odd) {
-        margin-right: 3%;
-      }
       &:last-child {
         margin-bottom: 6%;
       }
+    }
+  }
+}
+
+@media screen and (min-width: $tablet-screen) and (max-width: $desktop-screen) {
+
+  .product-list {
+    width: 104%;
+    padding: 10px 0 30px 0;
+    margin: 0 -2%;
+    padding: 0;
+    min-height: 500px;
+
+    .product {
+      width: 46%;
+      float: left;
+      margin: 2%;
     }
   }
 }
