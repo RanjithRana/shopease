@@ -82,7 +82,7 @@
 // Styles for smartphones (up to 1023px)
 @media screen and (max-width: $small-screen) {
   .filter-content {
-    padding: 70px 3% 0 3%;
+    padding: 70px 5% 0 5%;
 
     .select-box {
       width: 30%;
@@ -103,9 +103,9 @@
     min-height: 500px;
 
     .product {
-      width: 94%;
+      width: 90%;
       float: left;
-      margin: 3%;
+      margin: 5%;
 
       figure {
         figcaption {
